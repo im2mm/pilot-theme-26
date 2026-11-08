@@ -18,7 +18,7 @@
  */
 (function () {
     var EXT = 'pilot_theme_26';
-    var VERSION = '0.1.1';
+    var VERSION = '0.1.2';
     var BASE = '/store/' + EXT + '/';
 
     // PILOT main-menu itemId -> glyph of the gps.im2m.ws "tree" icon font (others keep PILOT's Font Awesome icon)

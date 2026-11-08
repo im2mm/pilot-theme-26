@@ -108,14 +108,14 @@ html.pt26 .pt26-header-hidden { display: none !important; }
 .pt26-modules::-webkit-scrollbar { display: none; }
 .pt26-item {
     width: 90px;
-    min-height: 80px;
-    padding: 12px 4px 8px;
+    min-height: 58px;
+    padding: 8px 4px 6px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 3px;
     cursor: pointer;
     color: #fff;
     text-align: center;
@@ -123,11 +123,11 @@ html.pt26 .pt26-header-hidden { display: none !important; }
 }
 .pt26-item:hover { background: rgba(255, 255, 255, .07); }
 .pt26-item.pt26-active { background: var(--pt-active); }
-.pt26-item .pt26-icon { font-size: 24px; line-height: 29px; height: 29px; }
-.pt26-item .pt26-icon.pt26-tree { font-family: 'pt26-tree'; font-style: normal; font-size: 27px; }
+.pt26-item .pt26-icon { font-size: 21px; line-height: 26px; height: 26px; }
+.pt26-item .pt26-icon.pt26-tree { font-family: 'pt26-tree'; font-style: normal; font-size: 24px; }
 .pt26-item .pt26-label {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 11px;
+    line-height: 13px;
     max-width: 84px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -138,12 +138,13 @@ html.pt26 .pt26-header-hidden { display: none !important; }
 .pt26-bottom {
     flex: 0 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 12px 0 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 14px;
+    padding: 10px 6px 12px;
+    border-top: 1px solid rgba(255, 255, 255, .12);
 }
-.pt26-bottom span { font-size: 20px; cursor: pointer; opacity: .9; }
+.pt26-bottom span { font-size: 16px; cursor: pointer; opacity: .9; }
 .pt26-bottom span:hover { opacity: 1; color: #cfe0ff; }
 
 /* ---------- status tiles (PILOT counters, gps.im2m.ws colors) ---------- */
