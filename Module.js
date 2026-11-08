@@ -18,7 +18,7 @@
  */
 (function () {
     var EXT = 'pilot_theme_26';
-    var VERSION = '0.1.0';
+    var VERSION = '0.1.1';
     var BASE = '/store/' + EXT + '/';
 
     // PILOT main-menu itemId -> glyph of the gps.im2m.ws "tree" icon font (others keep PILOT's Font Awesome icon)
@@ -176,12 +176,24 @@
             }).join('') + '<span class="fa fa-table-columns" data-act="classic" title="Classic view (normal PILOT look)"></span></div>');
 
             me.sidebar.update('<div class="pt26-sidebar">' + html.join('') + '</div>');
+            me.menuSig = me.menuSignature();
             me.sync();
+        },
+
+        /** Text of the visible menu buttons; changes when an extension adds its button after the sidebar was built. */
+        menuSignature: function () {
+            var parts = [];
+            this.menu.items.each(function (b) { if (!b.isHidden() && b.text) { parts.push(plain(b.text) + '|' + (b.iconCls || '')); } });
+            return parts.join(',');
         },
 
         sync: function () {
             var me = this, root = me.sidebar && me.sidebar.el && me.sidebar.el.dom, tiles;
             if (!root) { return; }
+            if (me.menuSignature() !== me.menuSig) {
+                me.build(); // build() stores the new signature and calls sync() again
+                return;
+            }
             // active module = the PILOT button that has "main_active"
             me.menu.items.each(function (b, i) {
                 var item = root.querySelector('.pt26-item[data-i="' + i + '"]');
