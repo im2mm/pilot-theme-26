@@ -1,0 +1,185 @@
+#universalSearchSelectorOverlay{
+	height : 100vh ;
+	width : 100vw ;
+	background-color: rgba(0 , 0 , 0 , 0.5);
+	z-index : 9999 ;
+	display: none ;
+	position: absolute ;
+	top : 0px ;
+	left : 0px ;
+}
+#universalSearchSelectorOverlay.showIt{
+	display: block ;
+}
+#universalSearchSelector{
+   height : 50px ;
+   width : 350px ;
+   position : absolute ;
+   top : 57px ;
+   right : calc(100vw/2 - 350px/2) ;
+   z-index : 99999 ;
+   border-radius : 2px ;
+   background-color: var(--subMenuBackgroundColor, #234292);
+   box-shadow : 9px 15px 29px 0px rgba(0 , 0 , 0 , 0.25) ;
+   visibility : hidden ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.universalSearchSelectorCont{
+   height : 65% ;
+   width : 94% ;
+   position : relative ;
+   display : flex ;
+   border-radius: 5px;
+   background-color: #fff ;
+}
+.universalSearchSelectorInput{
+    display : inline-block ;
+    width : 90% ;
+    height : 100% ;
+    border : none !important ;
+    background: transparent !important ;
+    color : #444444 ;
+    padding-left : 5px ;
+    padding-right : 5px ;
+    outline: none !important;
+}
+.universalSearchSelectorInput::placeholder {
+  color: #999999;
+  opacity: 0.89 ; 
+  font-size: 14px ;
+}
+.universalSearchSelectorInput::-ms-input-placeholder { /* Edge 12 -18 */
+  color: #999999;
+  font-size: 14px ;
+  opacity: 0.89 ; 
+}
+.universalSearchSelectorInput:focus-visible{
+	border : none !important ;
+}
+.universalSelectorSearchIcon{
+    display : inline-block ;
+    width : 10% ;
+    height : 100% ;
+    background-image: url("../images/logo/universalSelectorSearchIcon.svg") ;
+    background-position: center center ;
+    background-repeat: no-repeat ;
+    background-size: 14px ;
+}
+#allScreensList{
+	width : 350px ;
+	height : auto ;
+	position : absolute ;
+	z-index: 99999 ;
+	display: none ;
+  background-color: #fff ;
+	box-shadow : 9px 15px 29px 0px rgba(0 , 0 , 0 , 0.25) ;
+	user-select: none ;
+}
+#allScreensList.showIt{
+	display: block ;
+}
+.scrollVertical{
+  overflow-x: hidden ;
+  overflow-y: auto ;	
+}
+.scrollVertical::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollVertical::-webkit-scrollbar-track {
+   background:  transparent;
+}
+.scrollVertical::-webkit-scrollbar-thumb {
+  background: #444444 ;
+}
+.screenRedirectCont{
+	width: 100% ;
+	height : 30px ;	
+	padding-left : 15px ;
+	padding-right : 15px ;
+	box-sizing: border-box ;
+	display : none ;
+}
+.screenRedirectCont.visible{
+	display : block ;
+}
+.screenRedirectElem{
+	height : 100% ;
+	width : 100% ;
+	line-height: 30px ;
+	padding-left : 10px ;
+	display: block ;
+	overflow: hidden ;
+	white-space: nowrap ;
+	text-overflow: ellipsis ;	
+	color : #222 ;
+	font-size: 13px ;
+	border-bottom: 0.6px solid #bfbfbf ;
+	cursor: pointer ;
+}
+.screenRedirectCont:last-child .screenRedirectElem{
+	border : none ;
+}
+.universalSelectorSearchIconHomeScreen{
+	position : absolute ;
+	z-index: 9999 ;
+	right : 24px ;
+	top : 24px ;
+	cursor: pointer ;	
+	display: none ;
+}
+.universalSelectorSearchIconHomeScreen:hover svg path{
+	fill : #000 !important ;
+}
+.universalSelectorSearchIconHomeScreen.showIt{
+	display : block ;
+}
+
+.dTheme2 #universalSearchSelector{
+	top : 45px ;
+}
+.dTheme2 .universalSelectorSearchIconHomeScreen{
+   top : 40px ;	
+}
+.dTheme4 .universalSelectorSearchIconHomeScreen{
+	top : 70px ;
+}
+.dThemeIsmart .universalSelectorSearchIconHomeScreen{
+	top : 90px ;
+}
+.screenRedirectElem.selected {
+    background-color: color-mix(in srgb, var(--subMenuBackgroundColor, #234292) 15%, white);
+    /* color: #fff; */
+} 
+#recentScreens .screenElement:hover,
+#mostVisitedScreens .screenElement:hover {
+    background-color: color-mix(in srgb, var(--subMenuBackgroundColor, #234292) 15%, white);
+    /* color: #fff; */
+}
+
+#searchDropdown.screen-container {
+    position: absolute;
+    top: 42;
+    left:-9.5;
+    width: 106%;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#recentScreens,
+#mostVisitedScreens {
+    line-height: 20px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #222;
+    font-size: 13px;
+    cursor: pointer;
+}
+.screenElement.selected {
+    background-color: color-mix(in srgb, var(--subMenuBackgroundColor, #234292) 15%, white);
+    /* color: #fff; */
+}

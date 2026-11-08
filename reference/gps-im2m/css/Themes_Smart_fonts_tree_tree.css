@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "tree";
+  src: url('tree.eot?t=1619245098773'); /* IE9*/
+  src: url('tree.eot?t=1619245098773#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url("tree.woff2?t=1619245098773") format("woff2"),
+  url("tree.woff?t=1619245098773") format("woff"),
+  url('tree.ttf?t=1619245098773') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('tree.svg?t=1619245098773#tree') format('svg'); /* iOS 4.1- */
+}
+
+[class^="tree-"]:before, [class*=" tree-"]:before {
+  font-family: 'tree' !important;
+  font-size:24px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.tree-administration:before { content: "\ea01"; }
+.tree-avatar:before { content: "\ea02"; }
+.tree-bell:before { content: "\ea03"; }
+.tree-chart-1:before { content: "\ea04"; }
+.tree-chart-4:before { content: "\ea05"; }
+.tree-chart-fill:before { content: "\ea06"; }
+.tree-chart:before { content: "\ea07"; }
+.tree-charts:before { content: "\ea08"; }
+.tree-configuration:before { content: "\ea09"; }
+.tree-dashboard-1:before { content: "\ea0a"; }
+.tree-dashboard:before { content: "\ea0b"; }
+.tree-favourites:before { content: "\ea0c"; }
+.tree-help:before { content: "\ea0d"; }
+.tree-home:before { content: "\ea0e"; }
+.tree-launcher:before { content: "\ea0f"; }
+.tree-location:before { content: "\ea10"; }
+.tree-logout:before { content: "\ea11"; }
+.tree-notification-1:before { content: "\ea12"; }
+.tree-notification:before { content: "\ea13"; }
+.tree-report-2:before { content: "\ea14"; }
+.tree-report-3:before { content: "\ea15"; }
+.tree-report-4:before { content: "\ea16"; }
+.tree-report-fill:before { content: "\ea17"; }
+.tree-reports:before { content: "\ea18"; }
+.tree-setting-3:before { content: "\ea19"; }
+.tree-setting-fill:before { content: "\ea1a"; }
+.tree-settings:before { content: "\ea1b"; }
+.tree-tracking-1:before { content: "\ea1c"; }
+.tree-tracking-fill:before { content: "\ea1d"; }
+.tree-tracking:before { content: "\ea1e"; }
+.tree-user-1:before { content: "\ea1f"; }
+.tree-user-2:before { content: "\ea20"; }
+.tree-user:before { content: "\ea21"; }

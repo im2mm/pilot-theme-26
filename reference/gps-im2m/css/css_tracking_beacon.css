@@ -1,0 +1,227 @@
+#beacon_container{
+    height : 370px ;
+    width : 670px ;
+    /* border : 1px solid black ; */
+    position : relative ;
+   /* background : rgba(204,204,204 , 0.6) ; */
+    /* margin-left: 191px ; */
+    z-index: 999;
+}
+#beacon_vehicle{
+   height : 110px ;
+   width : fit-content ;
+   position : absolute ;
+   /* border : 1px solid black ; */
+   left : 290px ;   
+   bottom : 0px;
+}
+.box{
+  height : 23.01px ;
+  width : 59.16px ;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  position  : absolute ;
+  background : #ffff ;
+  padding : 2px ;
+  display: flex;
+}
+#box1{
+   left : 10px ;
+   bottom : 0px ;
+}
+
+#box2{
+   left : 0px ;
+   bottom : 35px ;
+}
+
+#box3{
+   left : 5px ;
+   bottom : 72px ;
+}
+
+#box4{
+  left : 20px ;
+  bottom : 110px ;
+}
+
+#box5{
+  left : 60px ;
+  bottom : 150px ;
+}
+
+#box6{
+  left : 150px ;
+  bottom : 150px ;
+}
+
+#box7{
+  left : 210px ;
+  bottom : 120px ;
+}
+
+#box8{
+  left : 230px ;
+  bottom : 80px ;
+}
+
+#box9{
+  left : 240px ;
+  bottom : 45px ;
+}
+
+#box10{
+  left : 230px ;
+  bottom : 10px ;
+}
+.boxLogo{
+   height : 23.01px ;
+   width : 19px ;
+} 
+
+ .boxLogo > img{
+    height : 100% ;
+    width : 100% ;
+}
+
+.numberContainer{
+     height: 100% ;
+     width : 30px ;
+     font-size: 13px ;
+     display: flex ;
+     gap : 3px ;
+     align-items: center;
+     justify-content: center;
+     color : #4A4A4A ;
+     padding-left: 3px ;
+     word-spacing: 3px ;
+}
+
+#beacon_range{
+    font-size: 10px ;
+    font-weight: bold ;
+    max-width : 30px;
+    height : 15px;
+  /*  text-overflow : ellipsis;
+    overflow: hidden;*/
+    cursor: pointer;
+}
+.finalBox{
+	height : 15px ;
+   	width : 40px ;
+}
+
+#box11{
+   background: #0C9DAD ;
+   left : 300px ;
+   bottom : 0px ;
+   padding-left: 5px  ;
+}
+
+#box11 div{
+   height : 100% ;
+   width : 100% ;
+   display: flex ;
+   gap : 3px ;
+   align-items: center;
+   /* justify-content: c; */
+}
+.arrowLeft {
+  width: 8px;
+  height: 8px;
+  border: 2px solid #ffff;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(135deg);  
+  /* margin-top: 5px ;
+  margin-left: 6px ; */
+  cursor: pointer;
+}
+
+#finalBoxNumber{
+    color : #ffff ;
+    font-size: 15px ;
+    text-align: center;
+    margin-left: 2px ;
+    margin-bottom : 2px ;    
+}
+
+.arrowRight{
+  width: 8px;
+  height: 8px;
+  border: 2px solid #ffff;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(-43deg);  
+  /* margin-top: 5px ;
+  margin-left: 6px ; */
+  cursor: pointer;
+}
+.disableArrow{
+	border-color : #0C9DAD;
+	cursor: auto;
+}
+.line{
+	float: left;
+    border: 1px dashed rgb(171 173 183);
+}
+#line1{	
+    margin-top: 340px;
+    margin-left: 75px;
+    width: 60px;
+    transform: rotate(185deg);
+}
+#line2{
+    margin-top: 320px;
+    margin-left: -73px;
+    width: 80px;
+    transform: rotate(198deg);
+}
+#line3{
+	margin-top: 300px;
+    margin-left: -85px;
+    width: 85px;
+    transform: rotate(214deg);
+}
+#line4{
+	margin-top: 275px;   
+	margin-left: -85px; 
+    width: 100px;
+    transform: rotate(235deg);
+}
+#line5{
+	transform: rotate(249deg);
+    margin-top: 262px;
+    width: 115px;
+    margin-left: -95px;
+}
+#line6{
+	margin-top: 262px;
+    transform: rotate(280deg);
+    margin-left: -75px;
+    width: 110px;
+}
+#line7{
+	margin-top: 275px;
+    margin-left: -85px;
+    width: 100px;
+    transform: rotate(293deg);
+}
+#line8{
+	margin-top: 290px;
+    margin-left: -78px;
+    width: 80px;
+    transform: rotate(308deg);
+}
+#line9{
+	margin-top: 310px;
+    margin-left: -60px;
+    width: 55px;
+    transform: rotate(332deg);
+}
+#line10{
+	margin-top: 45px;
+    margin-left: 18px;
+    width: 60px;
+    transform: rotate(355deg);
+}

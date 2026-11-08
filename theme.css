@@ -1,0 +1,233 @@
+/*
+ * pilot_theme_26: PILOT re-skinned to look like gps.im2m.ws (Trakzee "Smart" theme).
+ * Colors and sizes come from reference/gps-im2m/DESIGN.md.
+ * Every rule is scoped under html.pt26 (the class is set by Module.js), so removing the extension removes the theme.
+ */
+
+@font-face { font-family: 'PT26 Open Sans'; src: url('fonts/OpenSans-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'PT26 Open Sans'; src: url('fonts/OpenSans-Semibold.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: 'pt26-tree'; src: url('fonts/tree.woff2') format('woff2'), url('fonts/tree.woff') format('woff'); }
+
+html.pt26 {
+    --pt-sidebar: #07163D;
+    --pt-logo: #02050F;
+    --pt-active: #1542B7;
+    --pt-header: #234292;
+    --pt-text: #444444;
+    --pt-muted: #525252;
+    --pt-search: #F5F5F5;
+    --pt-group: #E6E6E6;
+    --pt-line: #E3E6EA;
+    --pt-card-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    --pt-font: 'PT26 Open Sans', 'Open Sans', Arial, sans-serif;
+}
+
+/* ---------- base typography ---------- */
+html.pt26 body,
+html.pt26 .x-body,
+html.pt26 .x-panel-body-default,
+html.pt26 .x-grid-cell-inner,
+html.pt26 .x-tree-node-text,
+html.pt26 .x-form-field,
+html.pt26 .x-btn-inner,
+html.pt26 .x-tab-inner,
+html.pt26 .x-panel-header-title-default,
+html.pt26 .x-window-header-title-default,
+html.pt26 .x-column-header-inner,
+html.pt26 .x-boundlist-item,
+html.pt26 .x-menu-item-text {
+    font-family: var(--pt-font) !important;
+}
+html.pt26 .x-grid-cell-inner,
+html.pt26 .x-tree-node-text { font-size: 11px; color: var(--pt-text); }
+html.pt26 .x-grid-item { border-color: var(--pt-line); }
+
+/* ---------- the original top header is replaced by the sidebar ---------- */
+html.pt26 .pt26-header-hidden { display: none !important; }
+
+/* ---------- left sidebar (90px, navy) ---------- */
+.pt26-sidebar {
+    background: var(--pt-sidebar);
+    color: #fff;
+    font-family: var(--pt-font);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    user-select: none;
+}
+.pt26-logo {
+    flex: 0 0 auto;
+    width: 90px;
+    height: 78px;
+    background: var(--pt-logo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.pt26-logo-img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% auto;
+}
+.pt26-user-row {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 6px 10px;
+}
+.pt26-user-row span {
+    position: relative;
+    font-size: 21px;
+    cursor: pointer;
+    opacity: .95;
+}
+.pt26-user-row span:hover { opacity: 1; color: #cfe0ff; }
+.pt26-badge {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    min-width: 16px;
+    padding: 0 4px;
+    border-radius: 8px;
+    background: #E53935;
+    color: #fff;
+    font: 600 10px/16px var(--pt-font);
+    text-align: center;
+}
+.pt26-modules {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+.pt26-modules::-webkit-scrollbar { display: none; }
+.pt26-item {
+    width: 90px;
+    min-height: 80px;
+    padding: 12px 4px 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    transition: background .15s;
+}
+.pt26-item:hover { background: rgba(255, 255, 255, .07); }
+.pt26-item.pt26-active { background: var(--pt-active); }
+.pt26-item .pt26-icon { font-size: 24px; line-height: 29px; height: 29px; }
+.pt26-item .pt26-icon.pt26-tree { font-family: 'pt26-tree'; font-style: normal; font-size: 27px; }
+.pt26-item .pt26-label {
+    font-size: 12px;
+    line-height: 14px;
+    max-width: 84px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.pt26-bottom {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0 16px;
+}
+.pt26-bottom span { font-size: 20px; cursor: pointer; opacity: .9; }
+.pt26-bottom span:hover { opacity: 1; color: #cfe0ff; }
+
+/* ---------- status tiles (PILOT counters, gps.im2m.ws colors) ---------- */
+.pt26-tiles {
+    display: flex;
+    gap: 0;
+    padding: 4px;
+    background: #fff;
+    font-family: var(--pt-font);
+    border-bottom: 1px solid var(--pt-line);
+}
+.pt26-tile {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 3px 2px 2px;
+    cursor: pointer;
+    line-height: 1.1;
+}
+.pt26-tile b { display: block; font-size: 12px; font-weight: 600; }
+.pt26-tile small { display: block; font-size: 8px; font-weight: 600; }
+.pt26-tile:hover { filter: brightness(.95); }
+.pt26-t-total    { background: rgba(0, 0, 0, .15);       color: #000; }
+.pt26-t-moving   { background: rgba(0, 128, 0, .15);     color: rgb(0, 128, 0); }
+.pt26-t-parking  { background: rgba(255, 0, 0, .15);     color: rgb(255, 0, 0); }
+.pt26-t-idle     { background: rgba(255, 193, 7, .15);   color: rgb(206, 154, 0); }
+.pt26-t-problems { background: rgba(128, 128, 128, .15); color: rgb(128, 128, 128); }
+
+/* ---------- panels, headers, tabs ---------- */
+html.pt26 .x-panel-header-default,
+html.pt26 .x-window-header-default {
+    background: var(--pt-header) !important;
+    border-color: var(--pt-header) !important;
+}
+html.pt26 .x-panel-header-default .x-title-text,
+html.pt26 .x-window-header-default .x-title-text,
+html.pt26 .x-panel-header-default .x-tool-img,
+html.pt26 .x-window-header-default .x-tool-img { color: #fff !important; }
+html.pt26 .x-window-default {
+    border-radius: 6px;
+    box-shadow: var(--pt-card-shadow);
+    overflow: hidden;
+}
+
+/* left panel (navigation region) reads like the floating object panel */
+html.pt26 .navigation .x-tab-bar-default,
+html.pt26 .leftbarpanel .x-tab-bar-default { background: var(--pt-header); }
+html.pt26 .leftbarpanel .x-tab-default { color: #fff; }
+html.pt26 .leftbarpanel .x-tab-default .x-tab-icon-el,
+html.pt26 .leftbarpanel .x-tab-default .x-tab-inner { color: #fff; }
+html.pt26 .leftbarpanel .x-tab-default.x-tab-active { background: #fff; }
+html.pt26 .leftbarpanel .x-tab-default.x-tab-active .x-tab-icon-el,
+html.pt26 .leftbarpanel .x-tab-default.x-tab-active .x-tab-inner { color: var(--pt-header); }
+
+/* search boxes */
+html.pt26 .x-form-text-field-body-default .x-form-text-wrap-default,
+html.pt26 .x-form-trigger-wrap-default {
+    background: var(--pt-search);
+    border-color: #D3D3D3;
+    border-radius: 3px;
+}
+
+/* tree groups (folders) as grey bold rows like the object list */
+html.pt26 .x-tree-view .x-grid-tree-node-expanded .x-grid-cell,
+html.pt26 .x-tree-view .x-grid-row-folder .x-grid-cell {
+    background: var(--pt-group);
+}
+html.pt26 .x-tree-view .x-grid-tree-node-expanded .x-tree-node-text { font-weight: 600; }
+html.pt26 .x-grid-item-selected .x-grid-cell,
+html.pt26 .x-grid-item-focused .x-grid-cell { background: #E3ECFB !important; }
+
+/* buttons: blue like gps.im2m.ws instead of PILOT orange */
+html.pt26 .x-btn-default-small,
+html.pt26 .x-btn-default-medium {
+    background: var(--pt-active) !important;
+    border-color: var(--pt-active) !important;
+    border-radius: 4px;
+}
+html.pt26 .x-btn-default-small .x-btn-inner,
+html.pt26 .x-btn-default-small .x-btn-icon-el,
+html.pt26 .x-btn-default-medium .x-btn-inner { color: #fff !important; }
+
+/* cards: rounded white boxes with a soft shadow (right-panel style) */
+html.pt26 .x-panel-default-framed,
+html.pt26 .x-tip-default {
+    border-radius: 6px;
+    box-shadow: var(--pt-card-shadow);
+}

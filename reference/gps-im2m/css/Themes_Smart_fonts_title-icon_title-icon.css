@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "title-icon";
+  src: url('title-icon.eot?t=1619249685641'); /* IE9*/
+  src: url('title-icon.eot?t=1619249685641#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url("title-icon.woff2?t=1619249685641") format("woff2"),
+  url("title-icon.woff?t=1619249685641") format("woff"),
+  url('title-icon.ttf?t=1619249685641') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('title-icon.svg?t=1619249685641#title-icon') format('svg'); /* iOS 4.1- */
+}
+
+[class^="title-icon-"], [class*=" title-icon-"],[class^="ui-icon-"]:before,[class*=" ui-icon-"]:before,[data-icon]:before {
+  font-family: 'title-icon' !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-variant: normal !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.title-icon-arrow-double-white:before,.title-icon-arrow-double:before { content: "\ea01"; }
+.title-icon-close-white:before,.title-icon-close-btn:before,.ui-icon-closethick:before  { content: "\ea02"; }
+.title-icon-column-settings:before { content: "\ea03"; }
+.title-icon-double-down-arrow-black:before { content: "\ea04"; }
+.title-icon-down-arrow:before { content: "\ea05"; }
+.title-icon-filter:before { content: "\ea06"; }
+.title-icon-information:before { content: "\ea07"; }
+.title-icon-minus-white:before,.title-icon-minus:before,.ui-icon-minus-white:before { content: "\ea08"; }
+.title-icon-modify-blink:before { content: "\ea09"; }
+.title-icon-pencil-edit-button:before { content: "\ea0a"; }
+.title-icon-route-path:before { content: "\ea0b"; }
+.title-icon-sorting:before { content: "\ea0c"; }
+.title-icon-translate:before { content: "\ea0d"; }
+.title-icon-work-schedule:before { content: "\ea0e"; }
+
+.ui-icon-closethick,.ui-icon-minus-white{
+	background:none !important;
+	font-size: 10px;
+	text-indent: 0px;
+	line-height: 16px;
+	color: #fff;
+}
+
+.title-icon-translate{
+	color: black;
+}
